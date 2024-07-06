@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 1000 */
+
+/* .mulish-<uniquifier> {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+:root{
+    font-family: "Mulish", sans-serif;
+    font-size: 62.5%;
+
+    --cor-titulo: #202024;
+    --cor-verde: #065E7C;
+    --cor-branca: #F4FCFF;
+    --cor-paragrafo: #121214;
+    --cor-footer: #387E96;
+    --cor-main-desktop: #F4FCFF;
+    
+}
+
+body, h1, h2, h3, p, input{
+    font-size: 1.6rem;
+}
+
+h1, h2, h3{
+    font-weight: bold;
+    color: var(--cor-titulo);
+}
+
+/* Header */
+header{
+    background-color: var(--cor-verde);
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    width: max(300px, 1180px);
+} 
+
+header div{
+    width: 4rem;
+}
+
+
+.logo{
+    border: 0.8rem solid var(--cor-branca);
+    border-radius: 50%;
+    background-color: var(--cor-branca);
+    color: #202024;
+}
+
+label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+}
+
+form{
+    flex: 1;
+    margin: 0 2.5rem;
+}
+
+form input{
+    width: 100%;
+    border: 0;
+    border-radius: 0.4rem;
+    padding: 1.2rem 1.6rem ;
+    /* margin: 0 2.6rem; */
+    background-color: rgba(255, 255, 255, 0.200);
+}
+
+input::placeholder{
+    color: var(--cor-branca);
+    font-family: "Mulish", sans-serif;
+}
+
+/* Main */
+
+.imagem-container{
+    max-width:80rem;
+    margin: auto;
+
+}
+
+.imagem-container img{
+    width: 100%;
+}
+
+section{
+    margin: 3.1rem 2.6rem 3.4rem 2.3rem
+}
+
+.container-pergunta{
+    width: min(342px ,800px) ; 
+    margin-bottom: 3.1rem;
+}
+
+h1{
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+button{
+    width: 4rem;
+    height: 4rem;
+    border: 0;
+    background-color: var(--cor-verde);
+    border-radius: 50%;
+
+    opacity: 0;
+    animation: fade-in 2s normal forwards ease-in-out
+    
+}
+
+@keyframes fade-in{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+button img{
+    margin-bottom: -0.2rem;
+}
+
+button + button{
+    margin-left: 1.2rem;
+}
+
+.container-paragrafo{
+    color: var(--cor-paragrafo);
+    font-weight: 600;
+    line-height: 2.5rem;
+    
+}
+
+.container-paragrafo p:nth-child(3){
+    margin-top: 4rem;
+}
+
+/* Article */
+
+article{
+    /* margin: 0 2.4rem 0 2.2rem; */
+    margin: auto;
+    max-width: 37.5rem;
+}
+
+h2{
+    font-size: 2.4rem;
+    width: 38.3rem;
+    margin: auto;
+    margin-bottom: 3.2rem;
+}
+
+article div{
+    width: 38.3rem;
+    margin: auto;
+}
+figure{
+    display: flex;
+    gap:1.6rem;
+    margin-bottom: 3.2rem;
+    
+}
+
+figure img{
+    aspect-ratio: 16/9;
+    max-height: 8.4rem;
+}
+
+figcaption{
+    width: 23rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    /* margin-bottom: 0.5rem; */
+}
+figcaption p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 2.9rem;
+    background-color: var(--cor-footer);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.6rem;
+}
+
+/* Desktp */
+
+@media (min-width:1240px){
+    main{
+        max-width: 100vw;
+        background-color: var(--cor-main-desktop);
+        padding: 4.4rem 11rem 3.9rem ;
+        display: grid;
+        grid-template-areas:
+                             "D D"
+                             "A C"
+                             "B C"
+                             "B C";  
+        justify-content: center;                                  
+    }
+
+    .imagem-container{
+        grid-area: A; 
+    }
+
+   section{
+    grid-area: B;
+    width: 80rem;
+   } 
+
+   article{
+    grid-area: C;
+    margin-top: -5px;
+    border: 0;
+   }
+
+   article div{
+    position: relative;
+    animation: mymove 1s;
+   }
+
+   @keyframes mymove {
+    from {left: -20px;}
+    to {left: 0px;}
+  }
+
+   .container-pergunta{
+    width: 80rem;
+    display: flex;
+    justify-content: space-between;
+   }
+
+   button{
+    animation: fade-in 0s normal forwards ease-in-out;
+    /* animação somente para mobile */
+    
+}
+
+
+   figure{
+    margin-bottom: 3.2rem;
+   }
+
+   footer{
+    margin-top: 0;
+   }
+
+}
