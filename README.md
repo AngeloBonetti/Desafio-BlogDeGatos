@@ -19,6 +19,4 @@ Este projeto foi desenvolvido como parte do desafio da Rocketseat. O objetivo do
 Este projeto foi uma ótima oportunidade para aplicar e aprimorar habilidades em desenvolvimento web, especialmente no que diz respeito à responsividade e uso de tecnologias modernas como CSS Grid e variáveis CSS. A Rocketseat continua a ser uma fonte inspiradora de desafios e aprendizado para desenvolvedores de todos os níveis.
 
 
-![Imagem Desktop](./image/image.pngimage.png)
-![Imagem Mobile primeira parte](./image/image-1.pngimage-1.png)
-![Imagem Mobile segunda parte](./image/image-2.pngimage-2.png)
+![Projeto](https://angelobonetti.github.io/Desafio-BlogDeGatos/)
