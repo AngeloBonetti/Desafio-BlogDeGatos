@@ -83,6 +83,7 @@ form input{
     padding: 1.2rem 1.6rem ;
     /* margin: 0 2.6rem; */
     background-color: rgba(255, 255, 255, 0.200);
+    color: var(--cor-branca);
 }
 
 input::placeholder{
@@ -124,14 +125,22 @@ button{
     border-radius: 50%;
 
     opacity: 0;
-    animation: fade-in 2s normal forwards ease-in-out
+    animation: fade-in 2s normal forwards ease-in-out;
     
+    transition: all 500ms;
+
+    cursor: pointer;
 }
 
 @keyframes fade-in{
     from {opacity: 0}
     to {opacity: 1}
 }
+
+button:hover{
+    background-color: #54a5c0;
+}
+
 
 button img{
     margin-bottom: -0.2rem;
@@ -167,9 +176,11 @@ h2{
     margin-bottom: 3.2rem;
 }
 
-article div{
+article a{
     width: 38.3rem;
     margin: auto;
+    text-decoration: none;
+    color: var(--cor-paragrafo);
 }
 figure{
     display: flex;
@@ -183,8 +194,8 @@ figure img{
     max-height: 8.4rem;
 }
 
-figcaption{
-    width: 23rem;
+figcaption p{
+    width: 22rem;
 }
 
 h3{
@@ -237,7 +248,7 @@ footer{
     border: 0;
    }
 
-   article div{
+   article a{
     position: relative;
     animation: mymove 1s;
    }
